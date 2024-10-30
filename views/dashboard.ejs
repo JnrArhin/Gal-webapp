@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine Management Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mine Management Dashboard</h1>
+        
+        <div class="form-section">
+            <h2>Record Production</h2>
+            <form id="productionForm">
+                <input type="text" name="equipmentId" placeholder="Equipment ID" required>
+                <input type="number" name="truckCount" placeholder="Truck Count" required>
+                <input type="number" name="scheduledHours" placeholder="Scheduled Hours" required>
+                <input type="number" name="workedHours" placeholder="Worked Hours" required>
+                <input type="text" name="operator" placeholder="Operator Name" required>
+                <input type="number" name="productionAmount" placeholder="Production Amount" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart">
+                <h2>Week-to-Date Production</h2>
+                <canvas id="weeklyChart"></canvas>
+            </div>
+            <div class="chart">
+                <h2>Month-to-Date Production</h2>
+                <canvas id="monthlyChart"></canvas>
+            </div>
+            <div class="chart">
+                <h2>Equipment Efficiency</h2>
+                <canvas id="efficiencyChart"></canvas>
+            </div>
+        </div>
+
+        <div class="metrics-container">
+            <div class="metric-card">
+                <h3>Operator Performance</h3>
+                <div id="operatorStats"></div>
+            </div>
+            <div class="metric-card">
+                <h3>Equipment Status</h3>
+                <div id="equipmentStatus"></div>
+            </div>
+            <div class="metric-card">
+                <h3>Maintenance Schedule</h3>
+                <div id="maintenanceSchedule"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/dashboard.js"></script>
+</body>
+</html> 

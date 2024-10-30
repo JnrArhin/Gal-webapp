@@ -1,0 +1,4 @@
+mkdir mine-management-app
+cd mine-management-app
+npm init -y
+npm install express mongoose chart.js dotenv ejs 
